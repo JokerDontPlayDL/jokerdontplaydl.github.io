@@ -71,6 +71,48 @@
             font-size:20px;
         }
     </style>
+    <style>
+        /* 弹窗 */
+        .cover{/*遮盖 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+        .alert-main{
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:cadetblue;
+            padding: 20px;
+            font-family: "caviar dreams";
+        }
+        .alert-title{
+            font-size:22px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        .alert-btn{
+            display: block;
+            margin: 0 auto;
+            padding: 7px 12px;
+            justify-content: flex-end;
+            background-color: cadetblue;
+            color: white;
+            cursor: pointer;
+            border:none;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+    </style>
 </head>
 <script>
     function Tip(word){
