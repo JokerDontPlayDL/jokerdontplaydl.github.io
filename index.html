@@ -15,7 +15,7 @@
         }
         .topmenu{
             height: 50px;
-            background-color: cadetblue;
+            background-color: var(--maincolor);
             margin: auto;
             z-index: 9998;
             position: fixed;
@@ -28,7 +28,7 @@
             width: 1200px;
         }
         .menu a{
-            color: black;
+            color: rgb(255, 255, 255);
         }
         .menu a:hover{
             font-weight: bold;
@@ -40,7 +40,9 @@
         }
     </style>
     <style>
-        
+        :root{
+            --maincolor: rgb(35, 40, 171);
+        }
         @font-face {
             font-family: "caviar dreams";
             src: url("fonts/CAVIARDREAMS.TTF");
@@ -49,7 +51,7 @@
             font-family: "caviar dreams";
             font-weight: bold;
             font-size: 15px;
-            background-color: cadetblue;
+            background-color: var(--maincolor);
             color: white;
             padding: 7px 12px;
             cursor: pointer;
@@ -57,7 +59,7 @@
             border:none;
         }
         a{
-            color:cadetblue;
+            color:var(--maincolor);
             text-decoration: none;
         }
         a:hover{
@@ -91,12 +93,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color:cadetblue;
+            color:var(--maincolor);
             padding: 20px;
             font-family: "caviar dreams";
         }
         .alert-title{
             font-size:22px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            color:rgb(0, 0, 0);
+        }
+        .alert-text{
+            font-size: 16px;
             line-height: 1.5;
             margin-bottom: 24px;
         }
@@ -105,7 +113,7 @@
             margin: 0 auto;
             padding: 7px 12px;
             justify-content: flex-end;
-            background-color: cadetblue;
+            background-color: var(--maincolor);
             color: white;
             cursor: pointer;
             border:none;
@@ -113,14 +121,31 @@
             transition: 0.2s;
         }
     </style>
+    
 </head>
 <script>
-    function Tip(word){
-        alert(word);
+    function Tip(msg,title="提示"){
+        document.getElementById("text").innerText = msg;
+        document.getElementById("title").innerText = title;
+        document.getElementById("box").style.display = "block";
+    }
+    function closeAlert(){
+        document.getElementById("box").style.display = "none";
     }
 </script>
-<body style="background-color: rgb(255, 255, 255);font-size:18px; font-family: 'caviar dreams';">
-    <!--顶部栏-->
+<body style="background-image:url('background.png');
+background-size: cover;
+background-attachment: fixed;
+font-size:18px;
+font-family: 'caviar dreams';
+color: aliceblue;">
+    <div class="cover" id="box">
+        <div class="alert-main">
+            <div class ="alert-title" id="title">提示</div>
+            <div class="alert-text" id="text"></div>
+            <button class="alert-btn" onclick="closeAlert()">确定</button>
+        </div>
+    </div>
     <img src="icon.png" style="position: fixed;
     top: 0;
     left: 0;
@@ -148,7 +173,7 @@
     <h4> · the City</h4>
         <span class="xiaozi">小丑的第一个正经饭制。</span>
         <br><a href="https://www.bilibili.com/video/BV1cqRQBHEsm"><button>关卡视频</button></a>  
-        <a href="DLFM/the City.zip" download><button onclick="Tip('只能下载电脑版')">下载关卡</button></a>  <br><br><br>    
+        <a href="DLFM/the City.zip" download><button onclick="Tip('只能下载电脑版,安卓请移步到官方群里下载！')">下载关卡</button></a>  <br><br><br>    
          <!-- <button onclick="ChooseDownload()">下载关卡</button><br><br><br> -->
     <h4> · 投诉火烧云之夜</h4>
         <a href="https://www.bilibili.com/video/BV1TBFszeEtT"><button>关卡视频</button></a>  
@@ -157,7 +182,7 @@
         <p>
             <spac class="xiaozi">本模板修改自冰焰模板4.7.6，加入了一些官方的元素，后面忘了</spac>
             <br><a href="MIFT4-7-6_Remake/"><button>关于模板</button></a>
-            <br><a href="https://qm.qq.com/q/r2HrfLGUP8"><button>加群下载</button></a>
+            <b<a href="https://qm.qq.com/q/r2HrfLGUP8"><button>加群下载</button></a>
             
         </p></div>
     
