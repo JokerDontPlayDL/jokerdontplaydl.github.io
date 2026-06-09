@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小丑的个人空间</title>
-    <link rel="icon" href="icon.png">
+    <link rel="icon" href="Images/icon.png">
+    <link rel="stylesheet" href="css/Button.css">
+    <link rel="stylesheet" href="css/Character.css">
+    <link rel="stylesheet" href="css/Containbox.css">
+    <link rel="stylesheet" href="css/Main.css">
+    <link rel="stylesheet" href="css/TopMenu.css">
+    <link rel="stylesheet" href="css/Window.css">
     <style>
         *{
             margin: 0;
@@ -12,51 +18,6 @@
             box-sizing: border-box;
             list-style: none;
             text-decoration: none;
-        }
-        .topmenu{
-            height: 50px;
-            background-color: var(--maincolor);
-            margin: auto;
-            z-index: 9998;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right:0%
-        }
-        .menu{
-            margin: auto;
-            width: 1200px;
-        }
-        .menu a{
-            color: rgb(255, 255, 255);
-        }
-        .menu a:hover{
-            font-weight: bold;
-        }
-        .menu li{
-            float: left;
-            height: 100px;
-            width: 200px;
-        }
-    </style>
-    <style>
-        :root{
-            --maincolor: rgb(35, 40, 171);
-        }
-        @font-face {
-            font-family: "caviar dreams";
-            src: url("fonts/CAVIARDREAMS.TTF");
-        }
-        button{
-            font-family: "caviar dreams";
-            font-weight: bold;
-            font-size: 15px;
-            background-color: var(--maincolor);
-            color: white;
-            padding: 7px 12px;
-            cursor: pointer;
-            border-radius: 10px;
-            border:none;
         }
         a{
             color:var(--maincolor);
@@ -73,55 +34,6 @@
             font-size:20px;
         }
     </style>
-    <style>
-        /* 弹窗 */
-        .cover{/*遮盖 */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            z-index: 9999;
-        }
-        .alert-main{
-            width: 300px;
-            background: white;
-            border-radius: 10px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color:var(--maincolor);
-            padding: 20px;
-            font-family: "caviar dreams";
-        }
-        .alert-title{
-            font-size:22px;
-            line-height: 1.5;
-            margin-bottom: 24px;
-            color:rgb(0, 0, 0);
-        }
-        .alert-text{
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 24px;
-        }
-        .alert-btn{
-            display: block;
-            margin: 0 auto;
-            padding: 7px 12px;
-            justify-content: flex-end;
-            background-color: var(--maincolor);
-            color: white;
-            cursor: pointer;
-            border:none;
-            border-radius: 10px;
-            transition: 0.2s;
-        }
-    </style>
-    
 </head>
 <script>
     function Tip(msg,title="提示"){
@@ -133,12 +45,8 @@
         document.getElementById("box").style.display = "none";
     }
 </script>
-<body style="background-image:url('background.png');
-background-size: cover;
-background-attachment: fixed;
-font-size:18px;
-font-family: 'caviar dreams';
-color: aliceblue;">
+<body style="font-size:18px;
+font-family: 'caviar dreams';">
     <div class="cover" id="box">
         <div class="alert-main">
             <div class ="alert-title" id="title">提示</div>
@@ -146,14 +54,14 @@ color: aliceblue;">
             <button class="alert-btn" onclick="closeAlert()">确定</button>
         </div>
     </div>
-    <img src="icon.png" style="position: fixed;
+    
+    <div class="topmenu">
+        <ul class="menu">
+            <li><img src="Images/icon.png" style="position: fixed;
     top: 0;
     left: 0;
     width: 50px;
-    z-index: 9999;">
-    <div class="topmenu">
-        <ul class="menu">
-            <li></li>            
+    z-index: 9999;"></li>            
             <li><a href="#">不玩DL的小丑</a></li>
             <li><a href="#">Joker's Studio</a></li>
 
@@ -169,21 +77,26 @@ color: aliceblue;">
         <br>p.s. 此网站还在制作中。。。敬请期待
         <br><br><br>
     </p>
-    <h3>个人作品</h3>
-    <h4> · the City</h4>
-        <span class="xiaozi">小丑的第一个正经饭制。</span>
-        <br><a href="https://www.bilibili.com/video/BV1cqRQBHEsm"><button>关卡视频</button></a>  
-        <a href="DLFM/the City.zip" download><button onclick="Tip('只能下载电脑版,安卓请移步到官方群里下载！')">下载关卡</button></a>  <br><br><br>    
-         <!-- <button onclick="ChooseDownload()">下载关卡</button><br><br><br> -->
-    <h4> · 投诉火烧云之夜</h4>
-        <a href="https://www.bilibili.com/video/BV1TBFszeEtT"><button>关卡视频</button></a>  
-        <a href="DLFM/举报火烧云之夜.rar" download><button onclick="Tip('只能下载电脑版')">下载关卡</button></a>  <br><br><br>
-    <h3>MIFT4.7.6 Remake</h3>
-        <p>
-            <spac class="xiaozi">本模板修改自冰焰模板4.7.6，加入了一些官方的元素，后面忘了</spac>
-            <br><a href="MIFT4-7-6_Remake/"><button>关于模板</button></a>
-            <b<a href="https://qm.qq.com/q/r2HrfLGUP8"><button>加群下载</button></a>
-            
+    <hr>
+    <h2>个人作品</h2>
+    <div class="container">
+        <a href="https://www.bilibili.com/video/BV1cqRQBHEsm">
+            <div class="box">
+                <h3>the City</h3>
+                <p>2026.5.9发布</p>
+                <img src="Images/City.png">
+            </div>
+        </a>
+
+        <a href="https://www.bilibili.com/video/BV1TBFszeEtT">
+            <div class="box">
+                <h3>举报火烧云之夜</h3>
+                <p>2026.2.7发布</p>
+                <img src="Images/TSBCN.png">
+            </div>
+        </a>
+    </div>
+     
         </p></div>
     
 </body>
