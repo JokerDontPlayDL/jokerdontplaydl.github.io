@@ -8,19 +8,23 @@
             left: 0;
             right:0%
         }
-        .menu{
-            margin: auto;
-            width: 1200px;
-        }
-        .menu a{
-            color: rgb(255, 255, 255);
-        }
-        .menu a:hover{
-            font-weight: bold;
-        }
-        .menu li{
-            float: left;
-            height: 100px;
-            width: 150px;
-            bottom: 0px;
-        }
+.menu{
+    margin: auto;
+    width: 1200px;
+}
+.menu a{
+    color: rgb(255, 255, 255);
+}
+.menu a:hover{
+    font-weight: bold;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    float: left;
+    height: 100px;
+    width: 150px;
+    bottom: 0px;
+}
